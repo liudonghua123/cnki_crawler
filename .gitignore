@@ -120,4 +120,4 @@ dist
 .vscode/
 build/
 
-*.xlsx
+output.xlsx

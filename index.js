@@ -17,14 +17,14 @@ const { assert } = require('console');
 const program = new Command();
 program.version(version);
 program
-  .option('-v, --verbose', 'output extra debugging')
-  .option('-h, --headless', 'output extra debugging')
+  .option('-d, --debug', 'output extra debugging')
+  .option('-l, --headless', 'output extra debugging')
   .option('-i, --input <xlsx_file_path>', 'input xlsx data file', 'input.xlsx')
   .option('-o, --output <xlsx_file_path>', 'output xlsx data file', 'output.xlsx');
 
 program.parse(process.argv);
 
-const { verbose, headless, input, output } = program.opts();
+const { debug: verbose, headless, input, output } = program.opts();
 
 function getChromePath() {
   let browserPath;
