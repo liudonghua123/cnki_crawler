@@ -1,0 +1,25 @@
+{
+  "name": "cnki_crawler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Donghua Liu <liudonghua123@gmail.com> (https://liudonghua.com/)",
+  "license": "MIT",
+  "scripts": {
+    "build-pkg": "pkg -t node14-win-x86,node14-linux-x64,node14-macos-x64 --out-path build .",
+    "build-node": "ncc build index.js -o build && shx mv build/index.js build/cnki_crawler && shx chmod a+x build/cnki_crawler"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0",
+    "debug": "^4.3.2",
+    "ora": "^5.4.1",
+    "puppeteer-core": "^10.1.0",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6",
+    "pkg": "^5.3.0",
+    "shx": "^0.3.3"
+  }
+}
